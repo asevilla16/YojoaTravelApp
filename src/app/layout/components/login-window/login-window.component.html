@@ -1,13 +1,15 @@
 <h2 mat-dialog-title>Bienvenido a Yojoa Travel</h2>
+<form [formGroup]="form">
 <mat-dialog-content>
   <mat-label>Login</mat-label>
   <mat-form-field>
-    <input matInput placeholder="Correo Electronico" />
+    <input matInput formControlName="userName" placeholder="Usuario o Correo Electronico" />
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Password" type="password" />
+    <input matInput formControlName="password" placeholder="Password" type="password" />
   </mat-form-field>
-  <mat-divider></mat-divider>
+  <!-- <ng-container>
+    <mat-divider></mat-divider>
   <mat-label>O Registrate</mat-label>
   <mat-form-field>
     <input matInput placeholder="Correo Electronico" />
@@ -18,9 +20,12 @@
   <mat-form-field>
     <input matInput placeholder="Password" type="password" />
   </mat-form-field>
+  </ng-container> -->
+  
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button mat-button>Crear Cuenta</button>
-  <button mat-button>Iniciar Sesion</button>
+  <!-- <button mat-button>Crear Cuenta</button> -->
+  <button mat-button [mat-dialog-close] (click)="login()">Iniciar Sesion</button>
 </mat-dialog-actions>
+</form>
