@@ -10,8 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'landing', //localhost/home/landing
-    loadChildren: () =>
-    import('./components/landing-page/landing-page.module').then((m)=>m.LandingPageModule)
+    component: LandingPageComponent
+    
   }
 
   
