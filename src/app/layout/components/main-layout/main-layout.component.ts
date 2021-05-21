@@ -1,3 +1,5 @@
+import { AuthComponent } from './../../../auth/components/auth/auth.component';
+import { AuthService } from './../../../auth/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
   MatDialog,
@@ -5,7 +7,6 @@ import {
   MAT_DIALOG_DATA,
   MatDialogConfig,
 } from '@angular/material/dialog';
-import { LoginWindowComponent } from '../login-window/login-window.component';
 
 @Component({
   selector: 'main-layout',
@@ -13,12 +14,15 @@ import { LoginWindowComponent } from '../login-window/login-window.component';
   styleUrls: ['./main-layout.component.css'],
 })
 export class MainLayoutComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog,
+    public authService: AuthService
+  ) {}
 
   ngOnInit(): void {}
 
   openDialog() {
-    let dialogRef = this.dialog.open(LoginWindowComponent, {
+    let dialogRef = this.dialog.open(AuthComponent, {
       data: { name: 'Hello' },
     });
   }
