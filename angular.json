@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "YojoaTravelApp"
+  "defaultProject": "YojoaTravelApp",
+  "cli": {
+    "analytics": "559c7a8b-d9f7-43b1-b98a-f95f50a86a08"
+  }
 }
