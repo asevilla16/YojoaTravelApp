@@ -30,18 +30,16 @@ export class AuthService {
     return !!localStorage.getItem('token');
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/landing']);
   }
-
-
 
   signUp(user: User) {
     return this.http.post(this.apiURL + this.registerUrl, {
       userName: user.userName,
       email: user.email,
-      phone: user.phone,
+      phoneNumber: user.phone,
       password: user.password,
     });
   }
