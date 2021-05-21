@@ -2,12 +2,20 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'landing', //localhost/home/landing
+    component: LandingPageComponent
+    
   }
+
+  
 ];
 
 @NgModule({
