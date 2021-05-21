@@ -1,29 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpClientModule} from "@angular/common/http";
 
-
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './components/home/home.component';
+import { LandingRoutingModule } from './landing-routing.module';
+import { LandingComponent } from './components/landing/landing.component';
 import { MaterialModule } from '../material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-//material
-
-
-
-
-
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    LandingComponent
+  ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
     MaterialModule,
+    LandingRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ]
 })
-export class HomeModule { }
+export class LandingModule { }

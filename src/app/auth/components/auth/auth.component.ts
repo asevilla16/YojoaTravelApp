@@ -14,11 +14,10 @@ export class AuthComponent implements OnInit {
   form: FormGroup;
 
   constructor(
+    private dialog: MatDialog,
     private _formBuilder: FormBuilder,
     private _authService: AuthService,
-    private _router: Router,
-    private dialog: MatDialog,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    private _router: Router
   ) {
     this.buildForm();
   }

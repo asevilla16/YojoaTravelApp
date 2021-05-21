@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -25,6 +26,7 @@ import { RegisterComponent } from './components/register/register.component';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
+    MatCardModule,
 
     FormsModule,
     ReactiveFormsModule,

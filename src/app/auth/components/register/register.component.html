@@ -1,33 +1,45 @@
-<h2 mat-dialog-title>Registrate !</h2>
-<form [formGroup]="form">
-  <ng-container>
-    <mat-dialog-content>
-      <mat-form-field>
-        <input matInput formControlName="userName" placeholder="Usuario" />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          formControlName="email"
-          placeholder="Correo Electronico"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput formControlName="phone" placeholder="Celular" />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          formControlName="password"
-          placeholder="Password"
-          type="password"
-        />
-      </mat-form-field>
-    </mat-dialog-content>
-  </ng-container>
-  <mat-dialog-actions>
-    <button mat-button [mat-dialog-close] (click)="register()">
-      Completar Registro
-    </button>
-  </mat-dialog-actions>
-</form>
+<div id="signUp">
+  <div class="container" fxLayoutAlign="center">
+    <mat-card-header fxLayout="column" fxLayoutAlign="space-around center">
+      <mat-card-title class="distance">Registrate !</mat-card-title>
+    </mat-card-header>
+  </div>
+
+  <form [formGroup]="form">
+    <ng-container>
+      <mat-dialog-content>
+        <mat-form-field class="distance" fxFlex="40">
+          <input matInput formControlName="userName" placeholder="Usuario" />
+        </mat-form-field>
+        <mat-form-field class="distance" fxFlex="40">
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Correo Electronico"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="phone" placeholder="Celular" />
+        </mat-form-field>
+        <mat-form-field class="distance" fxFlex="40">
+          <input
+            matInput
+            formControlName="password"
+            placeholder="Password"
+            type="password"
+          />
+        </mat-form-field>
+      </mat-dialog-content>
+    </ng-container>
+    <mat-dialog-actions fxLayout="column" fxLayoutAlign="space-around center">
+      <button
+        mat-raised-button
+        class="distance colorin"
+        [mat-dialog-close]
+        (click)="register()"
+      >
+        Completar Registro
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>
