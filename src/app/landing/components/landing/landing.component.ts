@@ -1,18 +1,14 @@
+import { LandingService } from './../../services/landing.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {ServicesService} from '../../services/home.service';
-
 import {ThemePalette} from '@angular/material/core';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'app-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css']
 })
-
-
-export class LandingPageComponent implements OnInit {
-
+export class LandingComponent implements OnInit {
 
   color: ThemePalette = 'accent';
   checked = false;
@@ -21,7 +17,7 @@ export class LandingPageComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private HomeServices: ServicesService) { 
+  constructor(private landingPageService: LandingService) { 
     
     this.formGroup = new FormGroup({
       activity: new FormControl(null,[Validators.required]),
@@ -55,8 +51,4 @@ getFormControl(controlName: string): FormControl
 
 
 
-
-
-
 }
-

@@ -17,7 +17,6 @@ export class AuthComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private _authService: AuthService,
     private _router: Router,
-    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.buildForm();
   }
