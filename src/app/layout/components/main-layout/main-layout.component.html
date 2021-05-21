@@ -3,4 +3,23 @@
   <span class="spacer"></span>
   <button mat-flat-button color="primary">Home</button>
   <button mat-flat-button color="primary" (click)="openDialog()">Login</button>
+
+  <button mat-icon-button [matMenuTriggerFor]="userMenu" class="decora user-button">
+    <mat-icon>account_circle</mat-icon>
+    <span>&nbsp; UserName &nbsp;</span>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
+<mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+    <a mat-menu-item routerLink="profile">
+        <mat-icon>account_circle</mat-icon>
+        <span>Mi Perfil</span>
+    </a>
+    <button mat-menu-item (click)="authService.logout()" class="">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar Sesión</span>
+    </button>
+</mat-menu>
 </mat-toolbar>
+
+
+<router-outlet></router-outlet>
