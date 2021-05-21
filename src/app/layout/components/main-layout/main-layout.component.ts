@@ -7,6 +7,7 @@ import {
   MAT_DIALOG_DATA,
   MatDialogConfig,
 } from '@angular/material/dialog';
+import { HomeComponent } from 'src/app/home/components/home/home.component';
 
 @Component({
   selector: 'main-layout',
@@ -26,4 +27,6 @@ export class MainLayoutComponent implements OnInit {
       data: { name: 'Hello' },
     });
   }
+
+ 
 }
