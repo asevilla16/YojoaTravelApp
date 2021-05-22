@@ -11,10 +11,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [AuthComponent, RegisterComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -29,10 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports: [
-    AuthComponent
-  ]
+  exports: [AuthComponent],
 })
-export class AuthModule { }
+export class AuthModule {}

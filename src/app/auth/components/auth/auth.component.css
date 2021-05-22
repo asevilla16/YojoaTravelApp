@@ -1,11 +1,11 @@
-#login{
+#login {
   /* background: url("/assets/images/cyber.jpg");
   background-size: cover; */
   height: 100%;
   margin: 0;
 }
 
-.container{
+.container {
   padding: 50px;
 }
 
@@ -15,12 +15,10 @@
   align-self: center;
 }
 
-
-.distance{
+.distance {
   margin: 15px;
 }
 
-.colorin{
+.colorin {
   background-color: #1687a7;
 }
-
