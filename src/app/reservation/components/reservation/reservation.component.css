@@ -1,0 +1,25 @@
+.cardsize {
+    max-width: 250px;
+    margin: auto;
+  }
+  
+  .mt1
+  {
+    margin-top: 32px !important;
+  }
+
+  .mb1
+  {
+    margin-bottom: 8px !important;
+  }
+
+  .w-50
+{
+  max-width: 500px; 
+  margin: auto;
+}
+
+.background-activity {
+  background-image: url("../../../../assets/hicking.jpg");
+   flex: 1;
+}

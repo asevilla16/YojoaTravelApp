@@ -12,6 +12,6 @@ export class LandingService {
 
   getActivity(): Observable<any>
   {
-    return this.httpClient.get<any>(`${environment.apiURL}/activity`);
+    return this.httpClient.get<any>(`${environment.apiURL}activity`);
   }
 }
