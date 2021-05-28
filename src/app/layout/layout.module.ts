@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginLayoutComponent } from './components/login-layout/login-layout.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [MainLayoutComponent, LoginLayoutComponent],
@@ -31,6 +32,7 @@ import { LoginLayoutComponent } from './components/login-layout/login-layout.com
     MatDividerModule,
     MatMenuModule,
     MatIconModule,
+    MatSidenavModule,
 
     FormsModule,
     ReactiveFormsModule,

@@ -31,9 +31,20 @@ const routes: Routes = [
         loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule)
       },
       {
+        path: 'reservation',
+        loadChildren: () => import('./reservation/reservation.module').then(m => m.ReservationModule)
+      },
+      {
         path: 'home',
         canActivate: [AuthGuard],
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        //temporalmente aqui, esta ruta debe ir protegida
+        path: 'admin',
+        loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+
+
       },
       {
         path: '**',

@@ -14,9 +14,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTableModule} from '@angular/material/table'; 
+
 
 const MaterialComponents = [MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule, MatSelectModule,MatDatepickerModule, MatNativeDateModule, 
-  MatMenuModule, MatAutocompleteModule, MatCardModule,MatSlideToggleModule, MatRadioModule, MatGridListModule];
+  MatMenuModule, MatAutocompleteModule, MatCardModule,MatSlideToggleModule, MatRadioModule, MatGridListModule, MatDividerModule, 
+  MatSidenavModule, MatTableModule];
 
 @NgModule({
   imports: [
