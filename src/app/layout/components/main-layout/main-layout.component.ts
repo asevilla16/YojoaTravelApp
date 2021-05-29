@@ -22,11 +22,11 @@ export class MainLayoutComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openDialog() {
-    let dialogRef = this.dialog.open(AuthComponent, {
-      data: { name: 'Hello' },
-    });
-  }
+  // openDialog() {
+  //   let dialogRef = this.dialog.open(AuthComponent, {
+  //     data: { name: 'Hello' },
+  //   });
+  // }
 
  
 }
