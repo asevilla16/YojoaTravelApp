@@ -6,20 +6,53 @@ export interface activity {
   id: number;
   nombre: string;
   description: string;
-  startime: Time;
-  endtime: Time;
-  duration: Time;
+  startime: string;
+  endtime: string;
+  duration: string;
   location: string;
   price: number;
   image: string;
 }
 
 const ELEMENT_DATA: activity[] = [
-  {id: 1, nombre: "Caminata Deportiva", description: "Caminata por la tarde", startime: {hours: 20, minutes: 30} , endtime: {hours: 21, minutes: 30}, duration: {hours: 1, minutes: 0}, location: "El Cajon", price: 120, image: "../../assets/ActivitiesImage.jpg"},
-  {id: 2, nombre: "Caminata Deportiva", description: "Caminata por la tarde", startime: {hours: 20, minutes: 30} , endtime: {hours: 21, minutes: 30}, duration: {hours: 1, minutes: 0}, location: "Panacam", price: 120, image: "../../assets/ActivitiesImage.jpg"},
-  {id: 3, nombre: "Caminata Deportiva", description: "Caminata por la tarde", startime: {hours: 20, minutes: 30} , endtime: {hours: 21, minutes: 30}, duration: {hours: 1, minutes: 0},location: "Santa Barbara", price: 120, image: "../../assets/ActivitiesImage.jpg"},
-  
-];
+  {
+    id: 1,
+    nombre: 'Caminata Deportiva',
+    description: 'Caminata por la mañana',
+    startime: '8:00 am',
+    endtime: '9:00 am',
+    duration: '1 hora',
+    location: 'El Cajon',
+    price: 150,
+    image: "../../assets/senderocajon.jpg",
+  },
+
+  {
+    id: 2,
+    nombre: 'Caminata Deportiva',
+    description: 'Caminata por la tarde',
+    startime: '8:00 am',
+    endtime: '9:00 am',
+    duration: '1 hora',
+    location: 'Panacam',
+    price: 160,
+    image: "../../assets/panacamhiking.jpg",
+  },
+
+  {
+    id: 3,
+    nombre: 'Caminata Deportiva',
+    description: 'Caminata por la mañana',
+    startime: '8:00 am',
+    endtime: '9:00 am',
+    duration: '1 hora',
+    location: 'Santa Barbara',
+    price: 110,
+    image: "../../assets/parque-nacional-de-santa-barbara.jpg",
+  }
+
+]; 
+
 
 @Component({
   selector: 'app-reservation',
