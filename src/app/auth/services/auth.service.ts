@@ -35,12 +35,7 @@ export class AuthService {
     this.router.navigate(['/landing']);
   }
 
-  signUp(user: User) {
-    return this.http.post(this.apiURL + this.registerUrl, {
-      userName: user.userName,
-      email: user.email,
-      phoneNumber: user.phone,
-      password: user.password,
-    });
+  signUp(user) {
+    return this.http.post(this.apiURL + this.registerUrl, user);
   }
 }

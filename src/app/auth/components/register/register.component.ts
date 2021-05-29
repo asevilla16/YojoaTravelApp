@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
 
   buildForm() {
     this.form = this._formBuilder.group({
-      userName: ['', Validators.required],
+      name: ['', Validators.required],
       email: ['', Validators.required],
       phone: [''],
       password: ['', Validators.required],
@@ -30,13 +30,12 @@ export class RegisterComponent implements OnInit {
 
   register() {
     const user = {
-      userName: this.form.get('userName').value,
+      name: this.form.get('name').value,
       email: this.form.get('email').value,
-      phone: this.form.get('phone').value,
+      phoneNumber: this.form.get('phone').value,
       password: this.form.get('password').value,
     };
-    console.log({ user });
-    this._authService.signUp(this.form.value).subscribe((res: any) => {
+    this._authService.signUp(user).subscribe((res: any) => {
       console.log({ res });
     });
   }
