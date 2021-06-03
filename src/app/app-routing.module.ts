@@ -22,6 +22,7 @@ const routes: Routes = [
       }
     ]
   },
+  
   {
     path: '',
     component: MainLayoutComponent,
@@ -31,9 +32,19 @@ const routes: Routes = [
         loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule)
       },
       {
+        path: 'profile',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
+      },
+      {
+        path: 'profile/activity',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
+      },
+    
+      {
         path: 'reservation',
         loadChildren: () => import('./reservation/reservation.module').then(m => m.ReservationModule)
       },
+   
       {
         path: 'home',
         canActivate: [AuthGuard],
@@ -46,6 +57,7 @@ const routes: Routes = [
 
 
       },
+    
       {
         path: '**',
         redirectTo: 'landing'
