@@ -30,6 +30,7 @@ export class SidenavComponent implements OnInit {
     this.profileService.getUser(1).subscribe(
       res => {
         this.user= res;
+        
       },
       err => console.log(err)
     );

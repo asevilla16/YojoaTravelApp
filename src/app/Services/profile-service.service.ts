@@ -15,4 +15,8 @@ export class ProfileServiceService {
    getUser(id: number){
      return this.http.get(`${this.API_URI}user/${id}`);
    }
+   updateUser(user: User , id:number){
+     console.log(user)
+     return this.http.put(`${this.API_URI}user/${id}`, user);
+   }
 }

@@ -26,11 +26,11 @@
     <mat-sidenav-content>
         <div class="content mat-elevation-z4">
             <div *ngIf="hijo==='activity'">
-            <app-activity></app-activity>
+            <app-activity ></app-activity>
             </div>
         
             <div *ngIf="hijo==='account'">
-            <app-account></app-account>
+            <app-account [user]="user"></app-account>
             </div>
         
         

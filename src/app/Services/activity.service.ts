@@ -12,4 +12,5 @@ export class ActivityService {
   getActivity(id: number){
     return this.http.get(`${this.API_URI}activity/user/${id}`);
   }
+  
 }

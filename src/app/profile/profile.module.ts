@@ -6,6 +6,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from '../material/material.module';
 import { ActivityComponent } from './activity/activity.component';
 import { AccountComponent } from './account/account.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -18,7 +20,9 @@ import { AccountComponent } from './account/account.component';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ProfileModule { }
