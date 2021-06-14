@@ -6,6 +6,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselComponent, CarouselModule } from 'ngx-owl-carousel-o';
+
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LandingRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule
+    
   ]
 })
 export class LandingModule { }
