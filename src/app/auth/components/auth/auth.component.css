@@ -1,9 +1,9 @@
 #login {
-  /* background: url("/assets/images/cyber.jpg");
-  background-size: cover; */
+  background: url("/assets/images/taylor-murphy-Y8RBSRJnaFA-unsplash.jpg");
+  background-size: cover;
   height: 100%;
   margin: 0;
-  align-self: center;
+  opacity: 100;
 }
 
 .container {
@@ -22,4 +22,11 @@
 
 .colorin {
   background-color: #1687a7;
+}
+
+.forgot-password {
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
 }

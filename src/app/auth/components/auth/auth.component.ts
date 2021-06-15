@@ -45,6 +45,6 @@ export class AuthComponent implements OnInit {
   }
 
   signUp() {
-    this.dialog.open(RegisterComponent);
+    this._router.navigate(['/auth/register'])
   }
 }

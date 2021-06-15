@@ -1,4 +1,4 @@
-mat-dialog-content {
+mat-card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,4 +15,18 @@ mat-dialog-content {
 
 .colorin {
   background-color: #1687a7;
+}
+
+.example-card {
+  max-width: 300px;
+  align-items: center;
+  align-self: center;
+}
+
+#signUp {
+  background: url("/assets/images/taylor-murphy-Y8RBSRJnaFA-unsplash.jpg");
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  opacity: 100;
 }

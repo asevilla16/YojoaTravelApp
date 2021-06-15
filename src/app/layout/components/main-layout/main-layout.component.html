@@ -1,25 +1,13 @@
 <mat-toolbar color="primary">
-    Yojoa Travel
+    <span>Yojoa Travel App</span>
     <span class="spacer"></span>
-    <button mat-flat-button color="primary" routerLink="landing">Home</button>
-    
-    <ng-container *ngIf="authService.isLogged()">
-        <button mat-icon-button [matMenuTriggerFor]="userMenu" class="decora user-button">
-            <mat-icon>account_circle</mat-icon>
-            <span>&nbsp; UserName &nbsp;</span>
-            <mat-icon>keyboard_arrow_down</mat-icon>
-        </button>
-        <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
-            <a mat-menu-item routerLink="profile">
-                <mat-icon>account_circle</mat-icon>
-                <span>Mi Perfil</span>
-            </a>
-            <button mat-menu-item (click)="authService.logout()" class="">
-                <mat-icon>exit_to_app</mat-icon>
-                <span>Cerrar Sesión</span>
-            </button>
-        </mat-menu>
-    </ng-container>
-    <button mat-flat-button *ngIf="!authService.isLogged()" color="primary" routerLink="auth">Login</button>
+    <a mat-button routerLink="home">Home</a>
+    <a mat-button *ngIf="authService.isLogged()" routerLink="profile">Perfil</a>
+    <a *ngIf="!authService.isLogged(); else viewLogout" mat-button routerLink="auth">Login</a>
 </mat-toolbar>
+
+<ng-template #viewLogout>
+    <a mat-button (click)="authService.logout()">Logout</a>
+</ng-template>
+
 <router-outlet></router-outlet>
