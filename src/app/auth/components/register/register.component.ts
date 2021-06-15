@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private router: Router
   ) {
     this.buildForm();
   }
@@ -37,6 +39,9 @@ export class RegisterComponent implements OnInit {
     };
     this._authService.signUp(user).subscribe((res: any) => {
       console.log({ res });
+      localStorage.setItem('token', res.token);
+      this._authService.loggedUser.next(res);
+      this.router.navigate(['/home'])
     });
   }
 }

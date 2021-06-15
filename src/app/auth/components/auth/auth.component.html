@@ -29,51 +29,16 @@
         </mat-card-content>
 
         <mat-card-actions fxLayout="column" fxLayoutAlign="space-around center">
-          <button
-            mat-raised-button
-            [mat-dialog-close]
-            class="distance colorin"
-            (click)="signUp()"
-          >
-            Crear Usuario
-          </button>
           <button mat-raised-button class="distance colorin" (click)="login()">
-            LogIn
+            Login
           </button>
+
+          <a class="forgot-password" (click)="signUp()">
+            ¿No tienes una cuenta? Registrate!
+          </a>
+
         </mat-card-actions>
       </form>
     </mat-card>
   </div>
 </div>
-
-<!-- <h2 mat-dialog-title>Bienvenido a Yojoa Travel</h2>
-<form [formGroup]="form">
-<mat-dialog-content>
-  <mat-label>Login</mat-label>
-  <mat-form-field>
-    <input matInput formControlName="userName" placeholder="Usuario o Correo Electronico" />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput formControlName="password" placeholder="Password" type="password" />
-  </mat-form-field> -->
-<!-- <ng-container>
-    <mat-divider></mat-divider>
-  <mat-label>O Registrate</mat-label>
-  <mat-form-field>
-    <input matInput placeholder="Correo Electronico" />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Celular" />
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Password" type="password" />
-  </mat-form-field>
-  </ng-container> -->
-
-<!-- </mat-dialog-content>
-
-<mat-dialog-actions>
-  <button mat-button>Crear Cuenta</button>
-  <button mat-button [mat-dialog-close] (click)="login()">Iniciar Sesion</button>
-</mat-dialog-actions>
-</form> -->

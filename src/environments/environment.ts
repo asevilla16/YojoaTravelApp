@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://localhost:5001/api/',
+  apiURL: 'https://localhost:44375/api/',
   activityprefix: 'Activity',
 };
 export const ImageUrl = {
   production: false,
-  apiURL: 'https://localhost:5001/activity/',
+  apiURL: 'https://localhost:44375/activity/',
   activityprefix: 'Activity',
 };
 

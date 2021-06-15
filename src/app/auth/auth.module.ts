@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AuthComponent, RegisterComponent],
@@ -30,6 +31,7 @@ import { RegisterComponent } from './components/register/register.component';
 
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule
   ],
   exports: [AuthComponent],
 })
