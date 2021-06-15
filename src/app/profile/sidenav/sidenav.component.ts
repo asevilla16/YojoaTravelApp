@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {ProfileServiceService} from '../../Services/profile-service.service'
 import {ActivityComponent} from '../activity/activity.component'
 import {AccountComponent} from '../account/account.component';
-import { activity } from 'src/app/reservation/components/reservation/reservation.component';
 
 @Component({
   selector: 'app-sidenav',

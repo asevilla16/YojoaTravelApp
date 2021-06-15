@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Activity</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Activity Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Enter Description</mat-label>
+    <input matInput [(ngModel)]="data.description">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Init Time</mat-label>
+    <input matInput [matDatepicker]="picker1" [(ngModel)]="data.initTime">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>End Time</mat-label>
+    <input matInput [matDatepicker]="picker2" [(ngModel)]="data.endTime">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input matInput [(ngModel)]="data.price">
+  </mat-form-field>
+ 
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

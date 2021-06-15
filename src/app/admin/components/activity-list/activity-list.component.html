@@ -1,0 +1,39 @@
+<mat-toolbar>
+    List Activity
+    <button mat-button class="menu-button" (click)="openDialog()" > 
+        <mat-icon>new</mat-icon>
+        <span>Add</span>        
+    </button>   
+</mat-toolbar>
+<div class='card-container' layout="row" >
+    <mat-card style="width: 350px;" *ngFor="let activity of activities" >
+      <img src="{{imagenURI}}{{activity.imageURL}}" class="md-card-image" alt="user avatar" width="150px" height="100px">     
+        <mat-card-content>
+          <table rules="cols">
+            <tr>
+              <td width="33%">Name : {{activity.name}}</td>              
+              <td align="center" width="33%">Precio</td>
+              <td width="33%" ></td>
+              
+            </tr>
+            <tr>
+              <td>Description : {{activity.description}}</td>            
+              <td rowspan="3" align="center">L. {{activity.price}}.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Init Time : {{activity.initTime | date:'medium'}}</td>
+                       
+              <td align="right"><button mat-button color="primary">Edit</button></td>
+            </tr>
+            <tr>
+              <td>End Time : {{activity.endTime | date:'medium'}}</td>
+                       
+              <td align="right"><button mat-button color="warn">Delete</button></td>
+            </tr>
+
+          </table>
+        </mat-card-content>
+    </mat-card>
+  </div>
+
