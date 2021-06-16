@@ -1,7 +1,8 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o'; 
-import {ActivityService} from '../../../Services/activity.service'
-import {ImageUrl} from '../../../../environments/environment';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ActivityService } from '../../../Services/activity.service'
+import { ImageUrl } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-landing',
@@ -9,23 +10,36 @@ import {ImageUrl} from '../../../../environments/environment';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  activities: any =[];
-  imagenURI= ImageUrl.apiURL;
+  activities: any = [];
+  imagenURI = ImageUrl.apiURL;
 
-  constructor(private activityService: ActivityService) { } 
+  constructor(
+    private activityService: ActivityService,
+    private router: Router
+  ) { }
 
-  getActivities(){
-    this.activityService.getActivities().subscribe
-    (res=> {
-        this.activities= res;
-      },
-      err => console.log(err)
-    );
-  }
 
   ngOnInit(): void {
     this.getActivities();
   }
+
+
+  getActivities() {
+    this.activityService.getActivities().subscribe
+      (res => {
+        console.log(res);
+        this.activities = res;
+      },
+        err => console.log(err)
+      );
+  }
+
+  chooseActivity(){
+    this.router.navigate(['/reservation']);
+  }
+
+
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

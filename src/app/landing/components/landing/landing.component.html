@@ -1,38 +1,36 @@
-
 <div class="carousel">
   <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide>
-      <img src="../../../../assets/panacam.jpg" width="350px" height="300px" />
-    </ng-template>  
+      <img src="../../../../assets/panacam.jpg" width="350px" height="350px" />
+    </ng-template>
     <ng-template carouselSlide>
-      <img src="../../../../assets/lagoimageback.jpg" width="350px" height="300px" />
-    </ng-template>  
+      <img src="../../../../assets/lagoimageback.jpg" width="350px" height="350px" />
+    </ng-template>
     <ng-template carouselSlide>
-      <img src="../../../../assets/hicking.jpg" width="350px" height="300px"/>
-    </ng-template>  
+      <img src="../../../../assets/hicking.jpg" width="350px" height="350px" />
+    </ng-template>
   </owl-carousel-o>
- </div>
- <div class='card-container' layout="row" >
+</div>
+<div class='card-container' layout="row">
   <mat-card style="width: 350px;" *ngFor="let activity of activities">
-    <img src="{{imagenURI}}{{activity.imageURL}}" class="md-card-image" alt="user avatar" width="150px" height="100px">     
-      <mat-card-content>
-        <table >
-         <tr>
-           <td>Name: {{activity.name}}</td>
-           <td>Price</td>
-           <td></td>
-         </tr> 
-         <tr>
+    <img src="{{imagenURI}}{{activity.imageURL}}" class="md-card-image" alt="user avatar" width="150px" height="100px">
+    <mat-card-content>
+      <table>
+        <tr>
+          <td>Name: {{activity.name}}</td>
+          <td>Price</td>
+          <td></td>
+        </tr>
+        <tr>
           <td>Descripcio: {{activity.description}}</td>
           <td>{{activity.price}}</td>
-          <td> 
-            <button mat-button class="menu-button">
-            <span>Reservar</span>
-           </button>
-      </td>
-        </tr>        
-
-        </table>
-      </mat-card-content>
+          <td>
+            <button mat-button (click)="chooseActivity()" class="menu-button">
+              <span>Reservar</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
   </mat-card>
 </div>
