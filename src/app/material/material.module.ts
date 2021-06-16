@@ -18,12 +18,14 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTableModule} from '@angular/material/table'; 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 
 const MaterialComponents = [MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule, MatSelectModule,MatDatepickerModule, MatNativeDateModule, 
   MatMenuModule, MatAutocompleteModule, MatCardModule,MatSlideToggleModule, MatRadioModule, MatGridListModule, MatDividerModule, 
-  MatSidenavModule, MatTableModule, MatToolbarModule];
+  MatSidenavModule, MatTableModule, MatToolbarModule, MatDialogModule];
 
 @NgModule({
   imports: [
