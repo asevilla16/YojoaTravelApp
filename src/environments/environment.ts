@@ -9,7 +9,7 @@ export const environment = {
 };
 export const ImageUrl = {
   production: false,
-  apiURL: 'https://localhost:5001/activity/',
+  apiURL: 'https://localhost:5001/api/Activity/',
   activityprefix: 'Activity',
 };
 

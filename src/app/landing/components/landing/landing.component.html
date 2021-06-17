@@ -1,36 +1,56 @@
 <div class="carousel">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <img src="../../../../assets/panacam.jpg" width="350px" height="350px" />
-    </ng-template>
-    <ng-template carouselSlide>
-      <img src="../../../../assets/lagoimageback.jpg" width="350px" height="350px" />
-    </ng-template>
-    <ng-template carouselSlide>
-      <img src="../../../../assets/hicking.jpg" width="350px" height="350px" />
-    </ng-template>
-  </owl-carousel-o>
+  <div>
+    <mat-card>
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <img
+            src="../../../../assets/panacam.jpg"
+            width="350px"
+            height="350px"
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="../../../../assets/lagoimageback.jpg"
+            width="350px"
+            height="350px"
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="../../../../assets/hicking.jpg"
+            width="350px"
+            height="350px"
+          />
+        </ng-template>
+      </owl-carousel-o>
+    </mat-card>
+  </div>
 </div>
-<div class='card-container' layout="row">
-  <mat-card style="width: 350px;" *ngFor="let activity of activities">
-    <img src="{{imagenURI}}{{activity.imageURL}}" class="md-card-image" alt="user avatar" width="150px" height="100px">
+<div class="card-container" layout="row">
+  <mat-card *ngFor="let activity of activities">
+    <img
+      src="{{ imagenURI }}{{ activity.imageURL }}"
+      class="md-card-image"
+      alt="user avatar"
+      width="150px"
+      height="100px"
+    />
     <mat-card-content>
-      <table>
-        <tr>
-          <td>Name: {{activity.name}}</td>
-          <td>Price</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Descripcio: {{activity.description}}</td>
-          <td>{{activity.price}}</td>
-          <td>
-            <button mat-button (click)="chooseActivity()" class="menu-button">
-              <span>Reservar</span>
-            </button>
-          </td>
-        </tr>
-      </table>
+      <mat-card-title class="activity-title">
+        {{ activity.name }}
+      </mat-card-title>
+      <div class="grid-container">
+        <div class="grid-item activity-description">
+          {{ activity.description }}
+        </div>
+        <div class="grid-item activity-price">L.{{ activity.price }}</div>
+        <div class="grid-item">
+          <button mat-raised-button color="primary" (click)="chooseActivity()">
+            <span>Reservar</span>
+          </button>
+        </div>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
