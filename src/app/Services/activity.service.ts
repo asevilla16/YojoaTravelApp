@@ -3,19 +3,18 @@ import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ActivityService {
-  API_URI= environment.apiURL;
+  API_URI = environment.apiURL;
 
-  constructor(private http: HttpClient) { }
-  
-  getActivity(id: number){
+  constructor(private http: HttpClient) {}
+
+  getActivity(id: number) {
     return this.http.get(`${this.API_URI}activity/user/${id}`);
   }
 
-  getActivities(){
+  getActivities() {
     return this.http.get(`${this.API_URI}activity`);
   }
-  
 }

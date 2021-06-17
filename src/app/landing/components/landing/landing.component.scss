@@ -1,43 +1,67 @@
-.carousel{
-    width: 100% !important;
-    // margin-left: 10%;
-    // margin-right: 10%;
+.carousel {
+  width: 100% !important;
+  // margin-left: 10%;
+  // margin-right: 10%;
 }
 
-.card-container{
-    width: 80% !important;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-  
+.activity-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-    mat-card{
+.activity-description {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.activity-price {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 100px 100px;
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.card-container {
+  width: 80% !important;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+
+  mat-card {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 90% !important;
+
+    mat-card-content {
+      margin-left: 10px;
+      width: 100%;
+
+      table {
+        width: 100%;
+      }
+    }
+    .md-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      button {
         margin-top: 10px;
-        display: flex;
-        flex-direction: row;            
-        width: 90% !important;
-
-        mat-card-content{
-            margin-left: 10px;
-            width: 100%;
-
-            table{
-                width: 100%;
-            }
-        }
-        .md-actions{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            button{
-                margin-top: 10px;
-                margin-left: 5px;
-            }
-        }
-        }
-
+        margin-left: 5px;
+      }
+    }
+  }
 }

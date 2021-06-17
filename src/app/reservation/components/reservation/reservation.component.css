@@ -1,6 +1,11 @@
-.container{
+.container {
   margin: 30px;
 }
 
+.field-container {
+  padding: 10px;
+}
 
-
+.description-field-container {
+  width: 100%;
+}
